@@ -16,7 +16,7 @@
         	<apellido>Ejemplo2</apellido>
         </datosPersonales>
 	<datosPublicos>
-		<dep>Info7/dep>
+		<dep>Info7</dep>
         	<salario>3000.45</salario>
 	</datosPublicos>
     </persona> 
@@ -26,11 +26,10 @@
         	<apellido>Ejemplo3</apellido>
         </datosPersonales>
 	<datosPublicos>
-		<dep>Info9/dep>
+		<dep>Info9</dep>
         	<salario>4000.45</salario>
 	</datosPublicos>
     </persona> 
-  
-    
+ 
 </Personas>
 
