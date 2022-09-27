@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Personas>
+    <persona>
+	<datosPersonales>
+        	<id>3</id>
+        	<apellido>Ejemplo1</apellido>
+        </datosPersonales>
+	<datosPublicos>
+		<dep>Info1</dep>
+        	<salario>2000.45</salario>
+	</datosPublicos>
+    </persona>
+    <persona>
+	<datosPersonales>
+        	<id>4</id>
+        	<apellido>Ejemplo2</apellido>
+        </datosPersonales>
+	<datosPublicos>
+		<dep>Info7/dep>
+        	<salario>3000.45</salario>
+	</datosPublicos>
+    </persona> 
+    <persona>
+	<datosPersonales>
+        	<id>5</id>
+        	<apellido>Ejemplo3</apellido>
+        </datosPersonales>
+	<datosPublicos>
+		<dep>Info9/dep>
+        	<salario>4000.45</salario>
+	</datosPublicos>
+    </persona> 
+  
+    
+</Personas>
+
