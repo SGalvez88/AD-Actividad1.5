@@ -9,15 +9,19 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class Main {
+    
+    private static final String caseDatosPersonales = "datosPersonales";
+    private static final String caseDatosPublicos = "datosPublicos";
 
     public static void main(String[] args) {
 
-        DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+        File file = new File("src\\resources\\Personas.xml");
 
         try {
+            DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 
-            File file = new File("src\\resources\\Personas.xml");
+            
 
             Document document = documentBuilder.parse(file);
 
@@ -38,19 +42,19 @@ public class Main {
 
                     for (int j = 0; j < personasHijos.getLength(); j++) {
 
-                        Node nodeHijo = personasHijos.item(j);
+                        Node nodeHijo = personasHijos.item(j);//cambiar nombre
 
                         if (nodeHijo.getNodeType() == Node.ELEMENT_NODE) {
 
                             Element elementoHijoPersona = (Element) nodeHijo;
 
                             switch (personasHijos.item(j).getNodeName()) {
-                                case "datosPersonales":
+                                case caseDatosPersonales:
                                     System.out.println("Id: " + elementoHijoPersona.getElementsByTagName("id").item(0).getTextContent());
                                     System.out.println("Apellido: "
                                             + elementoHijoPersona.getElementsByTagName("apellido").item(0).getTextContent());
                                     break;
-                                case "datosPublicos":
+                                case caseDatosPublicos:
                                     System.out.println("Departamento: "
                                             + elementoHijoPersona.getElementsByTagName("dep").item(0).getTextContent());
                                     System.out.println("Salario: "
@@ -61,7 +65,7 @@ public class Main {
                     }
                 }
             }
-
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
