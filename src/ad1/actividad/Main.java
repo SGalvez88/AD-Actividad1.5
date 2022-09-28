@@ -43,30 +43,32 @@ public class Main {
                 NodeList datosPersonalesYDatosPublicos = nodePersona.getChildNodes();
 
                 for (int j = 0; j < datosPersonalesYDatosPublicos.getLength(); j++) {
-                    System.out.println("El nombre del nodo es: " + datosPersonalesYDatosPublicos.item(j).getNodeName());
+                   // System.out.println("El nombre del nodo es: " + datosPersonalesYDatosPublicos.item(j).getNodeName());
                     
                     Node nodeDatosPersonalesYDatosPublicos = datosPersonalesYDatosPublicos.item(j);
                     
                     //if (datosPersonalesYDatosPublicos.item(j).getNodeName().equals("datosPersonales")) {
                     if (nodeDatosPersonalesYDatosPublicos.getNodeName().equals("datosPersonales")) {
                         
-                        NodeList idApellidoDepSalario = datosPersonalesYDatosPublicos.item(j).getChildNodes(); //obtienes un node y sus hijos
+                        //NodeList idApellidoDepSalario = datosPersonalesYDatosPublicos.item(j).getChildNodes(); //obtienes un node y sus hijos
+                        
+                        NodeList idApellido = nodeDatosPersonalesYDatosPublicos.getChildNodes(); //obtienes un node y sus hijos
 
-                        for (int k = 0; k < idApellidoDepSalario.getLength(); k++) {
-                            
-                            System.out.println("El nombre del nodo es: " + idApellidoDepSalario.item(k).getNodeName());
-
+                        for (int k = 0; k < idApellido.getLength(); k++) {
+                            //if si es apellido o id
+                            System.out.println("El nombre del nodo es: " + idApellido.item(k).getNodeName());
+                            System.out.println("El dato del nodo es: " + idApellido.item(k).getTextContent());
                         }
 
                     //} else if (datosPersonalesYDatosPublicos.item(j).getNodeName().equals("datosPublicos")) {
                     } else if (nodeDatosPersonalesYDatosPublicos.getNodeName().equals("datosPublicos")) {
 
-                        NodeList idApellidoDepSalario = datosPersonalesYDatosPublicos.item(j).getChildNodes(); //obtienes un node y sus hijos
+                        NodeList depSalario = datosPersonalesYDatosPublicos.item(j).getChildNodes(); //obtienes un node y sus hijos
 
-                        for (int k = 0; k < idApellidoDepSalario.getLength(); k++) {
+                        for (int k = 0; k < depSalario.getLength(); k++) {
                            
-                            System.out.println("El nombre del nodo es: " + idApellidoDepSalario.item(k).getNodeName());
-
+                            System.out.println("El nombre del nodo es: " + depSalario.item(k).getNodeName());
+                            System.out.println("El dato del nodo es: " + depSalario.item(k).getTextContent());
                         }
 
                     }
