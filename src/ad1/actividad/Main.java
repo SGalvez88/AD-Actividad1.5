@@ -42,11 +42,11 @@ public class Main {
 
                     for (int j = 0; j < personasHijos.getLength(); j++) {
 
-                        Node nodeHijo = personasHijos.item(j);//cambiar nombre
+                        Node nodePersonasHijos = personasHijos.item(j);//cambiar nombre
 
-                        if (nodeHijo.getNodeType() == Node.ELEMENT_NODE) {
+                        if (nodePersonasHijos.getNodeType() == Node.ELEMENT_NODE) {
 
-                            Element elementoHijoPersona = (Element) nodeHijo;
+                            Element elementoHijoPersona = (Element) nodePersonasHijos;
 
                             switch (personasHijos.item(j).getNodeName()) {
                                 case caseDatosPersonales:
